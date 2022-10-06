@@ -26,7 +26,7 @@ let userAge = parseInt(prompt('Quanti anni ha il passeggero ?'));
 
 console.log(tripKm, userAge);
 
-console.log(isNaN(tripKm), isNaN(userAge));
+// console.log(isNaN(tripKm), isNaN(userAge));
 if(isNaN(tripKm) || isNaN(userAge)){
     alert('Devi inserire vaolri numerici !');
 }
@@ -34,22 +34,23 @@ if(isNaN(tripKm) || isNaN(userAge)){
 const costPerKm = 0.21;
 const ticketCost = costPerKm * tripKm;
 
-console.log(ticketCost);
+// console.log(ticketCost);
 
 const underage = ticketCost / 100 * 80;
 const over = ticketCost / 100 * 60;
 
-console.log(underage, over);
-
-if ((userAge >= 18) && (userAge <= 65)){
-    console.log(ticketCost);
-} else if (userAge < 18){
-    console.log(underage);
-} else if (userAge > 65) {
-    console.log(over);
-}
+// console.log(underage, over);
 
 const correctPriceAdult = ticketCost.toFixed(2);
 const correctPriceUnderage = underage.toFixed(2);
 const correctPriceOver = over.toFixed(2);
-console.log(correctPriceAdult, correctPriceUnderage, correctPriceOver);
+// console.log(correctPriceAdult, correctPriceUnderage, correctPriceOver);
+
+if ((userAge >= 18) && (userAge <= 65)){
+    console.log(correctPriceAdult);
+} else if (userAge < 18){
+    console.log(correctPriceUnderage);
+} else if (userAge > 65) {
+    console.log(correctPriceOver);
+}
+
