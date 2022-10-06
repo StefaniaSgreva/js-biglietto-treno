@@ -10,7 +10,7 @@ Il biglietto andrà stampato in pagina!
 x Chiedere utente numero km che vuole percorrere
 x Chiedere utente età passeggero
 
-prezzo del biglietto = 1km * 0,21€
+x prezzo del biglietto = 1km * 0,21€
 minorenni < 18 sconto 20%
 over 65 > sconto 40%
 
@@ -21,7 +21,12 @@ biglietto stampato in pagina
 
 "use strict"; 
 
-let kmDaPercorrere = prompt('Quanti km devi percorrere ?');
-let anniUtente = prompt('Quanti anni ha il passeggero ?');
+let tripKm = parseInt(prompt('Quanti km devi percorrere ?'));
+let userAge = parseInt(prompt('Quanti anni ha il passeggero ?'));
 
-console.log(kmDaPercorrere, anniUtente);
+console.log(tripKm, userAge);
+
+const costPerKm = 0.21;
+const ticketCost = costPerKm * tripKm;
+
+console.log(ticketCost);
