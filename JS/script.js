@@ -40,3 +40,11 @@ const underage = ticketCost / 100 * 80;
 const over = ticketCost / 100 * 60;
 
 console.log(underage, over);
+
+if ((userAge >= 18) && (userAge <= 65)){
+    console.log(ticketCost);
+} else if (userAge < 18){
+    console.log(underage);
+} else if (userAge > 65) {
+    console.log(over);
+}
