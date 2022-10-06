@@ -11,8 +11,8 @@ x Chiedere utente numero km che vuole percorrere
 x Chiedere utente età passeggero
 
 x prezzo del biglietto = 1km * 0,21€
-minorenni < 18 sconto 20%
-over 65 > sconto 40%
+x minorenni < 18 sconto 20%
+x 4over 65 > sconto 40%
 
 output prezzo finale max due decimali centesimi prezzo
 
@@ -48,3 +48,8 @@ if ((userAge >= 18) && (userAge <= 65)){
 } else if (userAge > 65) {
     console.log(over);
 }
+
+const correctPriceAdult = ticketCost.toFixed(2);
+const correctPriceUnderage = underage.toFixed(2);
+const correctPriceOver = over.toFixed(2);
+console.log(correctPriceAdult, correctPriceUnderage, correctPriceOver);
