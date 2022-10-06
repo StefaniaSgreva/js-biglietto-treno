@@ -4,9 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./CSS/style.css">
     <title>JS BIGLIETTO TRENO</title>
 </head>
 <body>
+    <div class="ticket">
+        <div class="left">
+            <div class="image">
+                <p class="admit-one">
+                    <span>ADMIT-ONE</span>
+                    <span>ADMIT-ONE</span>
+                    <span>ADMIT-ONE</span>
+                </p>
+                <div class="ticket-number">
+                    <p>#20030277</p>
+                </div>
+            </div>    
+            <div class="ticket-info">
+                <p class="date">
+                    <span>Thursday</span>
+                    <span class="october-06">October 06th</span>
+                    <span>2022</span>
+                </p>
+                <div class="show-name">
+                    <h1>Somwhere</h1>
+                    <h2>€<span id="ticket-price" class="price"></span> </h2>
+                </div>
+                <div class="time">
+                    <p>8:00 AM <span>to</span> 11:00 PM</p>
+                    <p>BOARDING <span>@</span> 7:00 AM</p>
+                </div>
+                <p class="location"><span>A Magig Place, Somewhere</span></p>      
+            </div>
+        </div>
+        <div class="right">
+            <p class="admit-one">
+                <span>ADMIT-ONE</span>
+                <span>ADMIT-ONE</span>
+                <span>ADMIT-ONE</span>
+            </p>
+            <div class="right-info-container">
+                <div class="show-name">
+                    <h1>Somewhere</h1>
+                </div>
+                <div class="time">
+                    <p>8:00 AM <span>to</span> 11:00 PM</p>
+                    <p>BOARDING <span>@</span> 7:00 AM</p>
+                </div>
+                <div class="barcode">
+                    <img src="./img/qr-code.png" alt="QR code">
+                </div>
+                <div class="ticket-number">
+                    <p>#20030277</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="./JS/script.js"></script>
 </body>
 </html>

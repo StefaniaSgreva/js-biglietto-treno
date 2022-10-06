@@ -14,9 +14,9 @@ x prezzo del biglietto = 1km * 0,21€
 x minorenni < 18 sconto 20%
 x 4over 65 > sconto 40%
 
-output prezzo finale max due decimali centesimi prezzo
+x output prezzo finale max due decimali centesimi prezzo
 
-biglietto stampato in pagina
+x biglietto stampato in pagina
 */
 
 "use strict"; 
@@ -24,7 +24,7 @@ biglietto stampato in pagina
 let tripKm = parseInt(prompt('Quanti km devi percorrere ?'));
 let userAge = parseInt(prompt('Quanti anni ha il passeggero ?'));
 
-console.log(tripKm, userAge);
+// console.log(tripKm, userAge);
 
 // console.log(isNaN(tripKm), isNaN(userAge));
 if(isNaN(tripKm) || isNaN(userAge)){
@@ -47,10 +47,15 @@ const correctPriceOver = over.toFixed(2);
 // console.log(correctPriceAdult, correctPriceUnderage, correctPriceOver);
 
 if ((userAge >= 18) && (userAge <= 65)){
-    console.log(correctPriceAdult);
+    // console.log(correctPriceAdult);
+    const element = document.getElementById('ticket-price').innerHTML = correctPriceAdult;
 } else if (userAge < 18){
-    console.log(correctPriceUnderage);
+    // console.log(correctPriceUnderage);
+    const element = document.getElementById('ticket-price').innerHTML = correctPriceUnderage;
 } else if (userAge > 65) {
-    console.log(correctPriceOver);
+    // console.log(correctPriceOver);
+    const element = document.getElementById('ticket-price').innerHTML = correctPriceOver;
 }
+
+
 
