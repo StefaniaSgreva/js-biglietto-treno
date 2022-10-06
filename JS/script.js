@@ -26,7 +26,13 @@ let userAge = parseInt(prompt('Quanti anni ha il passeggero ?'));
 
 console.log(tripKm, userAge);
 
+console.log(isNaN(tripKm), isNaN(userAge));
+if(isNaN(tripKm) || isNaN(userAge)){
+    alert('Devi inserire vaolri numerici !');
+}
+
 const costPerKm = 0.21;
 const ticketCost = costPerKm * tripKm;
 
 console.log(ticketCost);
+
