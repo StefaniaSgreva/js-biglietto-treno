@@ -36,3 +36,7 @@ const ticketCost = costPerKm * tripKm;
 
 console.log(ticketCost);
 
+const underage = ticketCost / 100 * 80;
+const over = ticketCost / 100 * 60;
+
+console.log(underage, over);
