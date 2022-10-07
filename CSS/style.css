@@ -1,12 +1,3 @@
-:root{
-    --white: #ffffff;
-    --antiquewhite: #e5dac8;
-    --red:  #b31b1a;
-    --gold: #cea201;
-    --gray: #808080;
-    --light-gray: #a9a9a9;
-    --dashed-border: #404040;
-}
 *{
     margin: 0;
     padding: 0;
