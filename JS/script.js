@@ -8,7 +8,7 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 Il biglietto andrà stampato in pagina! 
 
 x Chiedere utente numero km che vuole percorrere
-x Chiedere utente età passeggero
+x Chiedo all'utente la sua età
 
 x prezzo del biglietto = 1km * 0,21€
 x minorenni < 18 sconto 20%
@@ -21,8 +21,8 @@ x biglietto stampato in pagina
 
 "use strict"; 
 
-let tripKm = parseInt(prompt('Quanti km devi percorrere ?'));
-let userAge = parseInt(prompt('Quanti anni ha il passeggero ?'));
+const tripKm = parseInt(prompt('Quanti km devi percorrere ?'));
+const userAge = parseInt(prompt('How old are you ?'));
 
 // console.log(tripKm, userAge);
 
@@ -32,7 +32,7 @@ if(isNaN(tripKm) || isNaN(userAge)){
 }
 
 const costPerKm = 0.21;
-const ticketCost = costPerKm * tripKm;
+let ticketCost = costPerKm * tripKm;
 
 // console.log(ticketCost);
 
@@ -41,9 +41,9 @@ const over = ticketCost / 100 * 60;
 
 // console.log(underage, over);
 
-const correctPriceAdult = ticketCost.toFixed(2);
-const correctPriceUnderage = underage.toFixed(2);
-const correctPriceOver = over.toFixed(2);
+let correctPriceAdult = ticketCost.toFixed(2);
+let correctPriceUnderage = underage.toFixed(2);
+let correctPriceOver = over.toFixed(2);
 // console.log(correctPriceAdult, correctPriceUnderage, correctPriceOver);
 
 if ((userAge >= 18) && (userAge <= 65)){
@@ -51,10 +51,10 @@ if ((userAge >= 18) && (userAge <= 65)){
     const element = document.getElementById('ticket-price').innerHTML = correctPriceAdult;
 } else if (userAge < 18){
     // console.log(correctPriceUnderage);
-    const element = document.getElementById('ticket-price').innerHTML = correctPriceUnderage;
+    const element = document.getElementById('ticket-price').innerHTML = correctPriceUnderage += '<div style="color: #b31b1a; font-size: 16px;">Hai ricevuto uno sconto del 20%</div>';
 } else if (userAge > 65) {
     // console.log(correctPriceOver);
-    const element = document.getElementById('ticket-price').innerHTML = correctPriceOver;
+    const element = document.getElementById('ticket-price').innerHTML = correctPriceOver += '<div style="color: #b31b1a; font-size: 16px;">Hai ricevuto uno sconto del 40%</div>';
 }
 
 
