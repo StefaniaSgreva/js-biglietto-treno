@@ -21,14 +21,14 @@ x biglietto stampato in pagina
 
 "use strict"; 
 
-const tripKm = parseInt(prompt('Quanti km devi percorrere ?'));
+const tripKm = parseInt(prompt('How many km do you have to travel ?'));
 const userAge = parseInt(prompt('How old are you ?'));
 
 // console.log(tripKm, userAge);
 
 // console.log(isNaN(tripKm), isNaN(userAge));
 if(isNaN(tripKm) || isNaN(userAge)){
-    alert('Devi inserire vaolri numerici !');
+    alert('You have to enter numbers!');
 }
 
 const costPerKm = 0.21;
@@ -51,10 +51,10 @@ if ((userAge >= 18) && (userAge <= 65)){
     const element = document.getElementById('ticket-price').innerHTML = correctPriceAdult;
 } else if (userAge < 18){
     // console.log(correctPriceUnderage);
-    const element = document.getElementById('ticket-price').innerHTML = correctPriceUnderage += '<div style="color: #b31b1a; font-size: 16px;">Hai ricevuto uno sconto del 20%</div>';
+    const element = document.getElementById('ticket-price').innerHTML = correctPriceUnderage += '<div style="color: #b31b1a; font-size: 16px;">You got a 20% discount</div>';
 } else if (userAge > 65) {
     // console.log(correctPriceOver);
-    const element = document.getElementById('ticket-price').innerHTML = correctPriceOver += '<div style="color: #b31b1a; font-size: 16px;">Hai ricevuto uno sconto del 40%</div>';
+    const element = document.getElementById('ticket-price').innerHTML = correctPriceOver += '<div style="color: #b31b1a; font-size: 16px;">You got a 40% discoun</div>';
 }
 
 
